@@ -144,7 +144,7 @@ function draw() {
   trex.collide(invisibleGround);
   trex.collide(ground);
   
-  if(mousePressedOver(restart)){
+  if((touches.length>0)||mousePressedOver(restart)){
     reset();
   }
   
@@ -212,6 +212,4 @@ function reset(){
   trex.changeAnimation("running", trex_running);
   score = 0;
 }
-
-
 
